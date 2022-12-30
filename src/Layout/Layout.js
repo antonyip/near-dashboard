@@ -1,5 +1,5 @@
 import React from "react";
-import MiniVarientDrawer from '../Components/MiniVarientDrawer';
+import MiniVarientDrawer from './MiniVarientDrawer';
 
 const Layout = ({ children }) => {
   return (

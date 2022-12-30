@@ -5,15 +5,15 @@ with
   first_tx as (
     select
       min(block_timestamp) as first_date,
-      tx_sender
+      tx_signer
     from
-      terra.core.fact_transactions
+      near.core.fact_transactions
     group by
       2
   )
 select
   date_trunc('week', first_date) as day_date,
-  count(tx_sender) as new_weekly,
+  count(tx_signer) as new_weekly,
   sum(new_weekly) over (
     order by
       day_date

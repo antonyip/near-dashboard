@@ -37,7 +37,14 @@ export default function SummaryPage() {
     }, 1000); // updates every 1 second
   }, []);
 
+  // fake use
+  if (TerraLunaStakingRateData && TerraLunaStakedData)
+  {
+    console.log("asd")
+  }
+
   useEffect(() => {
+    
     TerraSummary().then((res) => setTerraPriceData(CoinGeckoExtractPrice(res)));
     TerraLatestBlock().then((res) => {
       setTerraLatestBlock(PhoenixLCDExtractBlock(res));
@@ -91,7 +98,7 @@ export default function SummaryPage() {
           <SingleDigitDisplay
             chartName="Near Total Supply"
             chartValue={NumberWithCommas(TerraLunaSupplyData)}
-            disableSource={true}
+            chartSource={"https://api.nearblocks.io/v1/stats"}
           ></SingleDigitDisplay>
         </Grid>
         <Grid item xs={12} md={6} sx={{ p: 1 }}>
@@ -102,7 +109,7 @@ export default function SummaryPage() {
           ></SingleDigitDisplay>
         </Grid>
 
-        <Grid item xs={12} md={4} sx={{ p: 1 }}>
+        {/* <Grid item xs={12} md={4} sx={{ p: 1 }}>
           <SingleDigitDisplay
             chartName="Luna Staked"
             chartValue={NumberWithCommas(Math.round(TerraLunaStakedData))}
@@ -130,7 +137,7 @@ export default function SummaryPage() {
             }
             disableSource={true}
           ></SingleDigitDisplay>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

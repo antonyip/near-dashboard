@@ -3,10 +3,10 @@ import axios from "axios";
 const myQuery = `
 select
   date_trunc('week', block_timestamp) as day_date,
-  sum(fee) as sum_fee,
-  avg(fee) as avg_fee
+  sum(TRANSACTION_FEE) / pow(10,24) as sum_fee,
+  avg(TRANSACTION_FEE) / pow(10,24) as avg_fee
 from
-  terra.core.fact_transactions
+  near.core.fact_transactions
 group by
   1
 order by

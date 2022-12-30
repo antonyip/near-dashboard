@@ -11,7 +11,7 @@ with
       ) as prev_timestamp,
       datediff('seconds', prev_timestamp, block_timestamp) as seconds_diff
     from
-      terra.core.fact_blocks
+      near.core.fact_blocks
     order by
       block_id asc
   )

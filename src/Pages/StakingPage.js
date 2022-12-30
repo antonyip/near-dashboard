@@ -36,7 +36,7 @@ export default function DevelopmentPage() {
             chartBackgroundColors={[
               CHARTCOLORS.SECONDARY,
               CHARTCOLORS.PRIMARYLIGHT,
-              CHARTCOLORS.PRIMARYDARK,
+              CHARTCOLORS.PRIMARY,
             ]}
             chartYAxisLabel={[
               "Net Amount Staked",

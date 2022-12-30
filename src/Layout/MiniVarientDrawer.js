@@ -35,8 +35,8 @@ const HYPERLINKS = [
     ["Home","/",<HomeRoundedIcon sx={{color:"#fff"}} />],
     ["Transactions","/transactions",<ReceiptRoundedIcon sx={{color:"#fff"}} />],
     ["Wallets","/wallets",<WalletRoundedIcon sx={{color:"#fff"}} />],
-    ["Development","/development",<CodeIcon sx={{color:"#fff"}} />],
-    ["Supply","/supply",<BalanceIcon sx={{color:"#fff"}} />],
+    //["Development","/development",<CodeIcon sx={{color:"#fff"}} />],
+    //["Supply","/supply",<BalanceIcon sx={{color:"#fff"}} />],
     ["Staking","/staking",<AccountBalanceRoundedIcon sx={{color:"#fff"}} />],
     ["About","/about",<InfoIcon sx={{color:"#fff"}} />],
 ]

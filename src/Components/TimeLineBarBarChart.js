@@ -79,10 +79,19 @@ const TimeLineBarBarChart = ({
 
   const options = {
     responsive: true,
+    scales: {
+      x: {
+        stacked: true,
+      },
+      y: {
+        stacked: true,
+      },
+    },
     plugins: {
       legend: {
         position: "top",
       },
+
       title: {
         display: false,
         text: chartTitle,
@@ -91,7 +100,11 @@ const TimeLineBarBarChart = ({
   };
 
   const chartXAxisData = chartDataLoad.xAxis;
-  const chartYAxisData = [chartDataLoad.yAxis,chartDataLoad.yAxis2,chartDataLoad.yAxis3];
+  const chartYAxisData = [
+    chartDataLoad.yAxis,
+    chartDataLoad.yAxis2,
+    chartDataLoad.yAxis3,
+  ];
 
   //const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   // x-axis
@@ -118,11 +131,17 @@ const TimeLineBarBarChart = ({
     const yData = chartYAxisData[index];
     const yLabel = chartYAxisLabel[index];
     const yColor = chartBackgroundColors[index];
-    var yType = 'bar'
+    var yType = "bar";
     if (index === 0) {
       yType = "line";
     }
-    dataSets.push({ label: yLabel, data: yData, borderColor:yColor, backgroundColor: yColor, type: yType });
+    dataSets.push({
+      label: yLabel,
+      data: yData,
+      borderColor: yColor,
+      backgroundColor: yColor,
+      type: yType,
+    });
   }
   const data = {
     labels,

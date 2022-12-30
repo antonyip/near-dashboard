@@ -4,14 +4,14 @@ const myQuery = `
 select
   date_trunc('week', block_timestamp) as day_date,
   (
-    sum(iff(tx_succeeded = TRUE, 1, 0)) / count(distinct tx_id)
+    sum(iff(tx_status = 'Success', 1, 0)) / count(distinct tx_hash)
   ) * 100 as success_rate,
   avg(success_rate) over (
     order by
       day_date
   ) as avg_success_rate
 from
-  terra.core.fact_transactions
+  near.core.fact_transactions
 group by
   1
 order by

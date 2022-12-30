@@ -13,16 +13,16 @@ import {
   TerraWeeklyUnique,
   TerraWeeklyUniqueQuery,
 } from "../APIEndpoints/Terra-Weekly-Unique-Sender-Data";
-import {
-  Terra100Richlist,
-  Terra100RichlistQuery,
-} from "../APIEndpoints/Terra-100RichList-Data";
-import ConvertToTimeBarChart from "../Converters/ConvertToTimeBarChart";
+// import {
+//   Terra100Richlist,
+//   Terra100RichlistQuery,
+// } from "../APIEndpoints/Terra-100RichList-Data";
+// import ConvertToTimeBarChart from "../Converters/ConvertToTimeBarChart";
 
 export default function WalletsPage() {
   const [TerraWeeklyActiveData, setTerraWeeklyActiveData] = useState();
   const [TerraWeeklyUniqueData, setTerraWeeklyUniqueData] = useState();
-  const [TerraRichList, setTerraRichList] = useState();
+  //const [TerraRichList, setTerraRichList] = useState();
 
   useEffect(() => {
     TerraWeeklyActive().then((res) =>
@@ -31,9 +31,9 @@ export default function WalletsPage() {
     TerraWeeklyUnique().then((res) =>
       setTerraWeeklyUniqueData(ConvertToMultiAxisBarLineChart(res, true))
     );
-    Terra100Richlist().then((res) =>
-      setTerraRichList(ConvertToTimeBarChart(res, false))
-    );
+    //Terra100Richlist().then((res) =>
+//      setTerraRichList(ConvertToTimeBarChart(res, false))
+    //);
   }, []);
 
   return (
@@ -42,15 +42,6 @@ export default function WalletsPage() {
         Wallets
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={12} sx={{ p: 1 }}>
-          <TimeBarChart
-            chartDataLoad={TerraRichList}
-            chartTitle={"Top 100 Rich List"}
-            chartQuery={Terra100RichlistQuery()}
-            chartBackgroundColors={[CHARTCOLORS.PRIMARYLIGHT]}
-            chartYAxisLabel={["Luna"]}
-          ></TimeBarChart>
-        </Grid>
         <Grid item xs={12} md={6} sx={{ p: 1 }}>
           <TimeBarChart
             chartDataLoad={TerraWeeklyActiveData}

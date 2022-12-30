@@ -1,10 +1,10 @@
 const _CHARTCOLORS = {
-    PRIMARY: '#283593',
-    PRIMARYDARK: '#001064',
-    PRIMARYLIGHT: '#5f5fc4',
-    SECONDARY: '#ff6f00',
-    SECONDARYDARK: '#c43e00',
-    SECONDARYLIGHT: '#ffa040',
+    PRIMARY: '#666',
+    PRIMARYDARK: '#333',
+    PRIMARYLIGHT: '#888',
+    SECONDARY: '#cec',
+    SECONDARYDARK: '#aca',
+    SECONDARYLIGHT: '#dfd',
 }
 
 exports.CHARTCOLORS = _CHARTCOLORS
