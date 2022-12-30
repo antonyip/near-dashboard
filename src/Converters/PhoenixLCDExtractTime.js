@@ -1,8 +1,6 @@
 function PhoenixLCDExtractTime(data) {
-    var stringText = data.block.header.time.toString()
-    stringText = stringText.replace("T", " ")
-    stringText = stringText.slice(0, stringText.indexOf('.'))
-    return stringText;
+    var stringText = new Date(data.blocks[0].block_timestamp/1000000)
+    return stringText.toLocaleDateString() + " " + stringText.toLocaleTimeString() ;
 }
 
 export default PhoenixLCDExtractTime;

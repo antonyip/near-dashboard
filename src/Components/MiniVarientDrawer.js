@@ -22,6 +22,7 @@ import ReceiptRoundedIcon from '@mui/icons-material/ReceiptRounded';
 import WalletRoundedIcon from '@mui/icons-material/WalletRounded';
 import CodeIcon from '@mui/icons-material/Code';
 import BalanceIcon from '@mui/icons-material/Balance';
+import AccountBalanceRoundedIcon from '@mui/icons-material/AccountBalanceRounded';
 import {
     Link
   } from "react-router-dom";
@@ -36,13 +37,17 @@ const HYPERLINKS = [
     ["Wallets","/wallets",<WalletRoundedIcon sx={{color:"#fff"}} />],
     ["Development","/development",<CodeIcon sx={{color:"#fff"}} />],
     ["Supply","/supply",<BalanceIcon sx={{color:"#fff"}} />],
+    ["Staking","/staking",<AccountBalanceRoundedIcon sx={{color:"#fff"}} />],
     ["About","/about",<InfoIcon sx={{color:"#fff"}} />],
 ]
 
+const headerTitle = 'Near Dashboard'
+
 //create our style
+// background color is child page color
 const styles = {    
   childPage: {
-  backgroundColor: "#101010",
+  backgroundColor: "#ccc",
   color: "#fff"
 }};
 
@@ -143,7 +148,7 @@ export default function MiniVarientDrawer({ children }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Terra Dashboard
+            {headerTitle}
           </Typography>
         </Toolbar>
       </AppBar>

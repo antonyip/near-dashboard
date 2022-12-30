@@ -2,12 +2,21 @@ import { useEffect, useState } from "react";
 import MultiAxisBarLineChart from "../Components/MultiAxisBarLineChart";
 import ConvertToMultiAxisBarLineChart from "../Converters/ConvertToMultiAxisBarLineChart";
 import TimeBarChart from "../Components/TimeBarChart";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { CHARTCOLORS } from "../Constants/Colors";
 
-import { TerraWeeklyActive, TerraWeeklyActiveQuery } from "../APIEndpoints/Terra-Weekly-Active-Data";
-import { TerraWeeklyUnique, TerraWeeklyUniqueQuery } from "../APIEndpoints/Terra-Weekly-Unique-Sender-Data";
-import { Terra100Richlist, Terra100RichlistQuery } from "../APIEndpoints/Terra-100RichList-Data";
+import {
+  TerraWeeklyActive,
+  TerraWeeklyActiveQuery,
+} from "../APIEndpoints/Terra-Weekly-Active-Data";
+import {
+  TerraWeeklyUnique,
+  TerraWeeklyUniqueQuery,
+} from "../APIEndpoints/Terra-Weekly-Unique-Sender-Data";
+import {
+  Terra100Richlist,
+  Terra100RichlistQuery,
+} from "../APIEndpoints/Terra-100RichList-Data";
 import ConvertToTimeBarChart from "../Converters/ConvertToTimeBarChart";
 
 export default function WalletsPage() {
@@ -29,7 +38,9 @@ export default function WalletsPage() {
 
   return (
     <>
-      <div className="h2">Wallets</div>
+      <Typography variant="h4" gutterBottom color={"textPrimary"}>
+        Wallets
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12} sx={{ p: 1 }}>
           <TimeBarChart

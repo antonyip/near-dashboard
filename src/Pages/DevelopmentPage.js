@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MultiAxisBarLineChart from "../Components/MultiAxisBarLineChart";
 import ConvertToMultiAxisBarLineChart from "../Converters/ConvertToMultiAxisBarLineChart";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { CHARTCOLORS } from "../Constants/Colors";
 import {
   TerraContracts,
@@ -19,7 +19,9 @@ export default function DevelopmentPage() {
 
   return (
     <>
-      <div className="h2">Contracts</div>
+      <Typography variant="h4" gutterBottom color={"textPrimary"}>
+        Contracts
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={0} md={2} sx={{ p: 1 }}></Grid>
         <Grid item xs={12} md={8} sx={{ p: 1 }}>

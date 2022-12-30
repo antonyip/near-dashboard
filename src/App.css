@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(0, 0, 0, 1);
 }
 
 .App-link {
@@ -29,16 +29,11 @@
 }
 
 .MainPage {
-  
   background-color: #ffffffcc;
 }
 
 .NavigationBar-text {
   color: #4093c4;
-}
-
-.NavigationBar-mdao {
-  color: #dd610e;
 }
 
 .SubPage {

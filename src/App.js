@@ -13,22 +13,26 @@ import DevelopmentPage from './Pages/DevelopmentPage'
 import SupplyPage from './Pages/SupplyPage'
 import AboutPage from './Pages/AboutPage'
 import SummaryPage from './Pages/SummaryPage'
+import StakingPage from './Pages/StakingPage'
 import Layout from './Layout/Layout';
 
 function App() {
 
   const themeOptions = {
     palette: {
-      type: 'dark',
+      type: 'light',
       primary: {
-        main: '#283593',
+        main: '#333',
       },
       secondary: {
-        main: '#9E7F00',
+        main: '#666',
       },
       background: {
-        default: '#101010',
-        paper: '#161616',
+        default: '#333',
+        paper: '#333',
+      },
+      text: {
+        primary: '#111111',
       },
     },
     shape: {
@@ -98,7 +102,7 @@ function App() {
           padding: 1,
           '&$checked, &$colorPrimary$checked, &$colorSecondary$checked': {
             transform: 'translateX(16px)',
-            color: '#fff',
+            color: '#111',
             '& + $track': {
               opacity: 1,
               border: 'none',
@@ -112,7 +116,7 @@ function App() {
         track: {
           borderRadius: 13,
           border: '1px solid #bdbdbd',
-          backgroundColor: '#fafafa',
+          backgroundColor: '#111',
           opacity: 1,
           transition: 'background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
         },
@@ -131,6 +135,7 @@ const themeObject = createTheme(themeOptions);
               <Route path="/wallets" element={<Layout><WalletsPage className="SubPage"/></Layout>} />
               <Route path="/development" element={<Layout><DevelopmentPage className="SubPage"/></Layout>} />
               <Route path="/supply" element={<Layout><SupplyPage className="SubPage"/></Layout>} />
+              <Route path="/staking" element={<Layout><StakingPage className="SubPage"/></Layout>} />
               <Route path="/about" element={<Layout><AboutPage className="SubPage"/></Layout>} />
               <Route path="/" element={<Layout><SummaryPage className="SubPage"/></Layout>} />
             </Routes>
