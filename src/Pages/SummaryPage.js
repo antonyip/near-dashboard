@@ -34,7 +34,7 @@ export default function SummaryPage() {
   useEffect(() => {
     setInterval(() => {
       _setInternalTimer(Math.random());
-    }, 1000); // updates every 1 second
+    }, 10000); // updates every 10 second
   }, []);
 
   // fake use
