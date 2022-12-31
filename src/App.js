@@ -36,7 +36,7 @@ function App() {
       },
     },
     shape: {
-      borderRadius: 20,
+      borderRadius: 0,
     },
     props: {
       MuiButton: {
