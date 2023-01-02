@@ -21,12 +21,22 @@ export default function AboutPage() {
     <Typography color={"textPrimary"} variant='body1'><a href="https://metricsdao.xyz" target="_blank" rel="noreferrer">MetricsDAO</a></Typography>
     <br />
     <Typography color={"textPrimary"} variant='body1'>Other really good sources of info...</Typography>
-    <SimpleLink website={"https://near-dashboard.vercel.app/"}></SimpleLink>
-    <SimpleLink website={"https://cityofnear.xyz/"}></SimpleLink>
-    <SimpleLink website={"https://near-directory.streamlit.app/"}></SimpleLink>
-    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/the-city-of-near-xG8L9i"}></SimpleLink>
-    <SimpleLink website={"https://kiwi-paradox-650.notion.site/Measuring-User-Activity-on-NEAR-914d41d0e75442868853b03ec4bd3d2c"}></SimpleLink>
-    <SimpleLink website={"https://next.flipsidecrypto.xyz/forgash/near-developer-report-2022-year-end-UU6MTw"}></SimpleLink>
+    <SimpleLink website={"https://near-dashboard.vercel.app/"} name="TZM-Mega Dashboard"></SimpleLink>
+    <SimpleLink website={"https://cityofnear.xyz/"} name="Nat-Mega Dashboard"></SimpleLink>
+    <SimpleLink website={"https://near-directory.streamlit.app/"} name="Ltirrel-Mega Dashboard"></SimpleLink>
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/the-city-of-near-xG8L9i"} name="Pinehearst-City-Of-Near-Megadash"></SimpleLink>
+    <SimpleLink website={"https://kiwi-paradox-650.notion.site/Measuring-User-Activity-on-NEAR-914d41d0e75442868853b03ec4bd3d2c"} name="brian_-Measuring-User-Activity-on-NEAR"></SimpleLink>
+    <SimpleLink website={"https://next.flipsidecrypto.xyz/forgash/near-developer-report-2022-year-end-UU6MTw"} name="forgash-Near-Github Activity"></SimpleLink>
+
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/citizens-of-near-THIJUc"} name="Kida-Citizens of NEAR"></SimpleLink>
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/near-citizens-fQRyBU"} name="Pinehearst-Citizens of NEAR"></SimpleLink>
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/near-arts-district-m8p1bd"} name="Pinehearst-NEAR Arts District"></SimpleLink>
+
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/OEA5Tf"} name="Ali3N-Seasons in the City (Burrow)"></SimpleLink>
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/the-financial-district-AucGyJ"} name="alitaslimi-The Financial District"></SimpleLink>
     
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/3le4v_"} name="zackmendel-SchnY5-NEAR Sweat"></SimpleLink>
+    <SimpleLink website={"https://app.flipsidecrypto.com/dashboard/nbkOL1"} name="Ali3N-$PARAS Environmental Impact Study (NEAR Protocol)"></SimpleLink>
+
     </>
 }
